@@ -79,131 +79,124 @@ const ReviewsBadge = () => {
   };
 
   return (
-    <div className="relative inline-block">
-      {/* Tooltip */}
-      <AnimatePresence>
-        {isHovered && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-80 pointer-events-none"
-          >
-            {/* Arrow */}
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-gray-900 rotate-45 border-r border-b border-orange-500/30" />
+    <div className="min-h-fit bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center p-0 rounded-2xl">
+      <div className="relative inline-block">
+        {/* Tooltip */}
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-60 pointer-events-none"
+            >
+              {/* Arrow */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white/95 rotate-45 border-r border-b border-orange-200" />
 
-            {/* Tooltip Content */}
-            <div className="relative bg-gray-900 rounded-2xl p-5 shadow-2xl border border-orange-500/30 backdrop-blur-xl">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentReviewIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4 }}
-                  className="space-y-3"
-                >
-                  {/* Header */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white font-semibold text-sm">
-                      {reviews[currentReviewIndex].avatar}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-gray-100 font-semibold text-sm">
-                        {reviews[currentReviewIndex].name}
-                      </h4>
-                      <div className="flex items-center gap-1 mt-0.5">
-                        {renderStars(reviews[currentReviewIndex].rating)}
+              {/* Tooltip Content */}
+              <div className="relative bg-white/95 backdrop-blur-md rounded-xl p-5 shadow-xl border border-orange-200">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentReviewIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4 }}
+                    className="space-y-3"
+                  >
+                    {/* Header */}
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white font-semibold text-sm shadow-md">
+                        {reviews[currentReviewIndex].avatar}
+                      </div>
+                      <div className="flex-1 justify-start">
+                        <h4 className="text-gray-800 font-semibold text-sm">
+                          {reviews[currentReviewIndex].name}
+                        </h4>
+                        <div className="flex items-center gap-1 mt-0.5">
+                          {renderStars(reviews[currentReviewIndex].rating)}
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Review Text */}
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    "{reviews[currentReviewIndex].text}"
-                  </p>
-                </motion.div>
-              </AnimatePresence>
+                    {/* Review Text */}
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      "{reviews[currentReviewIndex].text}"
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
 
-              {/* Progress Indicator */}
-              <div className="flex gap-1.5 mt-4 justify-center">
-                {reviews.map((_, index) => (
-                  <motion.div
-                    key={index}
-                    className={`h-1 rounded-full transition-all duration-300 ${
-                      index === currentReviewIndex
-                        ? "w-6 bg-orange-500"
-                        : "w-1.5 bg-gray-700"
-                    }`}
-                    initial={false}
-                    animate={{
-                      width: index === currentReviewIndex ? 24 : 6,
-                    }}
-                  />
-                ))}
+                {/* Progress Indicator */}
+                <div className="flex gap-1.5 mt-4 justify-center">
+                  {reviews.map((_, index) => (
+                    <motion.div
+                      key={index}
+                      className={`h-1 rounded-full transition-all duration-300 ${
+                        index === currentReviewIndex
+                          ? "w-6 bg-orange-500"
+                          : "w-1.5 bg-orange-200"
+                      }`}
+                      initial={false}
+                      animate={{
+                        width: index === currentReviewIndex ? 24 : 6,
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-      {/* Badge */}
-      <motion.div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        whileHover={{ scale: 1.05, y: -2 }}
-        whileTap={{ scale: 0.98 }}
-        className="relative bg-gradient-to-br from-gray-900 to-black backdrop-blur-xl rounded-xl px-8 py-3 shadow-xl border border-orange-500/30 cursor-pointer overflow-hidden group"
-      >
-        {/* Animated Background Gradient */}
-        {/* <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-white via-amber-500/5 to-orange-500/5"
-          animate={{
-            x: ["-100%", "100%"],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        /> */}
-
-        {/* Content */}
-        <div className="relative z-10 flex items-center gap-6">
-          {/* Rating Section */}
-          <div className="flex flex-col items-center gap-2 border-r border-gray-700 pr-6">
-            <div className="flex items-center gap-0.5">{renderStars(4.4)}</div>
-            <span className="text-xl font-bold text-gray-100">4.4</span>
-          </div>
-
-          {/* Reviews Count */}
-          <div className="">
-            <p className="text-gray-300 text-sm font-semibold">500+ Reviews</p>
-            <p className="text-gray-300 text-sm font-semibold">1000+ 😀customers</p>
-
-          </div>
-
-         
-        </div>
-
-        {/* Shimmer Effect */}
+        {/* Badge */}
         <motion.div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          style={{
-            background:
-              "linear-gradient(90deg, transparent, rgba(251, 146, 60, 0.1), transparent)",
-          }}
-          animate={{
-            x: ["-100%", "100%"],
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </motion.div>
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          className="relative bg-white/50 backdrop-blur-md rounded-lg px-4 py-4 shadow-lg border-2 border-black cursor-pointer overflow-hidden group"
+        >
+          {/* Content */}
+          <div className="relative z-10   flex items-center gap-5">
+            {/* Rating Section */}
+            <div className="flex border-r border-gray-500 pr-4 flex-col items-center gap-1.5">
+              <div className="flex items-center gap-0.5">
+                {renderStars(4.4)}
+              </div>
+              <span className="text-2xl font-bold text-gray-800">4.4</span>
+            </div>
+
+            {/* Divider */}
+            {/* <div className="h-12 w-px bg-gradient-to-b from-transparent via-orange-300 to-transparent" /> */}
+
+            {/* Reviews Count */}
+            <div className="flex flex-col gap-0.5">
+              <p className="text-gray-700 text-sm font-semibold">
+                500+ Reviews
+              </p>
+              <p className="text-gray-600 text-xs">1000+ Customers</p>
+            </div>
+          </div>
+
+          {/* Subtle Shimmer Effect */}
+          <motion.div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, rgba(251, 146, 60, 0.08), transparent)",
+            }}
+            animate={{
+              x: ["-100%", "100%"],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+      </div>
     </div>
   );
 };

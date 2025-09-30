@@ -1,3 +1,4 @@
+import ImagesPeek from "@/components/ImagesPeek";
 import PrimartBtn from "@/components/PrimartBtn";
 import ReviewsBadge from "@/components/ReviewsBadge";
 import SecondaryBtn from "@/components/SecondaryBtn";
@@ -8,10 +9,10 @@ const HomePage = () => {
   return (
     <>
       {/* Mobile Layout - Centered in viewport */}
-      <section className="md:hidden relative min-h-screen h-full w-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 text-white px-4 sm:px-6">
+      <section className="hero md:hidden relative min-h-screen h-full w-full flex flex-col items-center justify-center text-white px-4 sm:px-6">
         
         {/* Hero Content */}
-        <div className="flex flex-col items-center pt-28 justify-center text-center space-y-6">
+        <div className="flex flex-col items-center pt-40 justify-center text-center space-y-6">
           
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl font-semibold leading-tight max-w-2xl oxygen">
@@ -26,7 +27,10 @@ const HomePage = () => {
           </p>
           
           {/* CTA Buttons */}
-          <nav className="flex flex-col gap-4 items-center justify-center w-full max-w-sm" aria-label="Main actions">
+          <nav className="relative mt-12 flex flex-col gap-4 items-center justify-center w-full max-w-sm" aria-label="Main actions">
+          <div className="price -rotate-6 bg-amber-500 px-4 py-2 rounded-bl-2xl rounded-tr-2xl absolute bottom-[95%] left-10">
+              <p className="font-bold text-black" >Starting from <span>₹699</span> </p>
+            </div>
             <PrimartBtn text="Book A Cleaning Now" />
             <SecondaryBtn href="tel:918057607415" text="91 8057607415" />
           </nav>
@@ -52,19 +56,22 @@ const HomePage = () => {
       </section>
 
       {/* Desktop Layout - Video half in/out */}
-      <section className="hidden md:flex relative min-h-screen w-full flex-col items-center justify-start bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-visible pb-48 lg:pb-64">
+      <section className="hero hidden md:flex relative min-h-screen w-full flex-col items-center justify-start text-white overflow-visible pb-48 lg:pb-64">
         {/* Hero Content */}
-        <div className="container mx-auto px-6 lg:px-8 z-10 flex flex-col items-center justify-center pt-36 lg:pt-44 pb-16 md:pb-20">
+        <div className="container mx-auto px-6 lg:px-8 z-10 flex flex-col items-center justify-center pt-36 lg:pt-32 pb-16 md:pb-20">
           
           {/* Heading */}
           <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 max-w-4xl oxygen">
             Best Cleaning Services <br /> 
-            in Hyderabad, India
+            in <span className="text-amber-500" >Hyderabad, India</span>
           </h1>
 
-          <div className=" hidden lg:block absolute right-10 translate-y-30" >
+          <div className=" hidden lg:block absolute right-10 top-1/2" >
             <ReviewsBadge />
           </div>
+          {/* <div className=" hidden lg:block absolute left-10 top-1/2 -translate-y-1/2">
+            <ImagesPeek />
+          </div> */}
           
           {/* Description */}
           <p className="text-center text-base md:text-lg leading-relaxed mb-10 md:mb-12 max-w-2xl text-gray-200">
@@ -74,7 +81,10 @@ const HomePage = () => {
           </p>
           
           {/* CTA Buttons */}
-          <nav className="flex gap-6 items-center justify-center" aria-label="Main actions">
+          <nav className="relative flex gap-6 items-center justify-center" aria-label="Main actions">
+            <div className="price -rotate-6 bg-amber-500 px-4 py-2 rounded-bl-2xl rounded-tr-2xl absolute bottom-[85%] -left-10">
+              <p className="font-bold text-black" >Starting from <span>₹699</span> </p>
+            </div>
             <PrimartBtn text="Book A Cleaning Now" />
             <SecondaryBtn href="tel:918057607415" text="91 8057607415" />
           </nav>

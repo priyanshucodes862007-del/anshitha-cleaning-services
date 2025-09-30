@@ -123,7 +123,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-slate-900/95 backdrop-blur-xl shadow-2xl z-[70] md:hidden"
+              className="fixed top-0 right-0 max-h-screen h-full w-[85%] max-w-sm bg-slate-900/95 backdrop-blur-xl shadow-2xl z-[70] md:hidden"
               role="dialog"
               aria-modal="true"
               aria-label="Mobile navigation menu"
@@ -153,7 +153,7 @@ const Navbar = () => {
               </div>
 
               {/* Menu Content */}
-              <nav className="flex flex-col h-[calc(100%-80px)]">
+              <nav className="flex flex-col h-[calc(90%-80px)]">
                 {/* Navigation Links */}
                 <ul className="flex-1 px-6 py-8 space-y-2">
                   {navLinks.map(({ href, label }, index) => (
