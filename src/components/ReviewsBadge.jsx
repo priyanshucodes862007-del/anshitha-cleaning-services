@@ -68,18 +68,28 @@ const ReviewsBadge = () => {
     const hasHalfStar = rating % 1 !== 0;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<FaStar key={i} className="text-yellow-400" size={10} />);
+      stars.push(
+        <FaStar
+          key={i}
+          className="text-[var(--support-yellow-400)]"
+          size={10}
+        />
+      );
     }
     if (hasHalfStar) {
       stars.push(
-        <FaStarHalfAlt key="half" className="text-yellow-400" size={10} />
+        <FaStarHalfAlt
+          key="half"
+          className="text-[var(--support-yellow-400)]"
+          size={10}
+        />
       );
     }
     return stars;
   };
 
   return (
-    <div className="min-h-fit bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center p-0 rounded-2xl">
+    <div className="min-h-fit bg-gradient-warm-soft flex items-center justify-center p-0 rounded-2xl">
       <div className="relative inline-block">
         {/* Tooltip */}
         <AnimatePresence>
@@ -92,10 +102,10 @@ const ReviewsBadge = () => {
               className="absolute bottom-full translate-x-1/2 right-[70%] mb-3 w-80 pointer-events-none"
             >
               {/* Arrow */}
-              <div className="absolute -bottom-2 left-[60%] -translate-x-1/2 w-4 h-4 bg-white/95 rotate-45 border-r border-b border-orange-200" />
+              <div className="absolute -bottom-2 left-[60%] -translate-x-1/2 w-4 h-4 bg-white/95 rotate-45 border-r border-b border-[var(--support-orange-200)]" />
 
               {/* Tooltip Content */}
-              <div className="relative bg-white/95 backdrop-blur-md rounded-xl p-5 shadow-xl border border-orange-200">
+              <div className="relative bg-white/95 backdrop-blur-md rounded-xl p-5 shadow-xl border border-[var(--support-orange-200)]">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentReviewIndex}
@@ -107,11 +117,11 @@ const ReviewsBadge = () => {
                   >
                     {/* Header */}
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center text-white font-semibold text-sm shadow-md">
+                      <div className="w-10 h-10 rounded-full bg-gradient-accent-warm flex items-center justify-center text-white font-semibold text-sm shadow-md">
                         {reviews[currentReviewIndex].avatar}
                       </div>
                       <div className="flex-1 justify-start">
-                        <h4 className="text-gray-800 font-semibold text-sm">
+                        <h4 className="text-neutral-800 font-semibold text-sm">
                           {reviews[currentReviewIndex].name}
                         </h4>
                         <div className="flex items-center gap-1 mt-0.5">
@@ -121,7 +131,7 @@ const ReviewsBadge = () => {
                     </div>
 
                     {/* Review Text */}
-                    <p className="text-gray-600 text-base font-semibold leading-relaxed">
+                    <p className="text-neutral-600 text-base font-semibold leading-relaxed">
                       "{reviews[currentReviewIndex].text}"
                     </p>
                   </motion.div>
@@ -134,8 +144,8 @@ const ReviewsBadge = () => {
                       key={index}
                       className={`h-1 rounded-full transition-all duration-300 ${
                         index === currentReviewIndex
-                          ? "w-6 bg-orange-500"
-                          : "w-1.5 bg-orange-200"
+                          ? "w-6 bg-[var(--support-orange-400)]"
+                          : "w-1.5 bg-[var(--support-orange-200)]"
                       }`}
                       initial={false}
                       animate={{
@@ -155,16 +165,16 @@ const ReviewsBadge = () => {
           onMouseLeave={() => setIsHovered(false)}
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.98 }}
-          className="relative bg-white/50 backdrop-blur-md rounded-lg px-4 py-4 shadow-lg border-2 border-black cursor-pointer overflow-hidden group"
+          className="relative bg-white/50 backdrop-blur-md rounded-lg px-4 py-4 shadow-lg border-2 border-[var(--neutral-black)] cursor-pointer overflow-hidden group"
         >
           {/* Content */}
           <div className="relative z-10   flex items-center gap-5">
             {/* Rating Section */}
-            <div className="flex border-r border-gray-500 pr-4 flex-col items-center gap-1.5">
+            <div className="flex border-r border-neutral-500 pr-4 flex-col items-center gap-1.5">
               <div className="flex items-center gap-0.5">
                 {renderStars(4.4)}
               </div>
-              <span className="text-2xl font-bold text-gray-800">4.4</span>
+              <span className="text-2xl font-bold text-neutral-800">4.4</span>
             </div>
 
             {/* Divider */}
@@ -172,10 +182,10 @@ const ReviewsBadge = () => {
 
             {/* Reviews Count */}
             <div className="flex flex-col gap-0.5">
-              <p className="text-gray-700 text-sm font-semibold">
+              <p className="text-neutral-700 text-sm font-semibold">
                 500+ Reviews
               </p>
-              <p className="text-gray-600 text-xs">1000+ Customers</p>
+              <p className="text-neutral-600 text-xs">1000+ Customers</p>
             </div>
           </div>
 

@@ -2,17 +2,19 @@
 import Image from "next/image";
 import React from "react";
 import { Check } from "lucide-react";
+import SplitText from "@/components/SplitText";
+import Button from "@/components/Button";
 
 const AboutSection = () => {
   return (
     <section className="mt-20 md:mt-40 pb-20" aria-labelledby="about-heading">
-      <div className="w-11/12 max-w-full mx-auto rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 py-16 px-6 md:px-12 lg:px-16 relative overflow-hidden">
+      <div className="w-11/12 max-w-full mx-auto rounded-3xl hero py-16 px-6 md:px-12 lg:px-16 relative overflow-hidden">
         {/* Enhanced decorative circles with animation */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400 rounded-full opacity-20 blur-2xl animate-pulse"></div>
-        <div className="absolute top-40 left-40 w-24 h-24 bg-blue-300 rounded-full opacity-25 blur-xl"></div>
-        <div className="absolute bottom-20 left-20 w-20 h-20 bg-blue-500 rounded-full opacity-15 blur-lg"></div>
-        <div className="absolute top-20 right-48 w-40 h-40 bg-blue-400 rounded-full opacity-20 blur-2xl"></div>
-        <div className="absolute bottom-32 right-32 w-28 h-28 bg-blue-300 rounded-full opacity-25 blur-xl animate-pulse"></div>
+        {/* <div className="absolute top-10 left-10 w-32 h-32 rounded-full opacity-20 blur-2xl animate-pulse bg-info-400"></div>
+        <div className="absolute top-40 left-40 w-24 h-24 rounded-full opacity-25 blur-xl bg-info-300"></div>
+        <div className="absolute bottom-20 left-20 w-20 h-20 rounded-full opacity-15 blur-lg bg-info-500"></div>
+        <div className="absolute top-20 right-48 w-40 h-40 rounded-full opacity-20 blur-2xl bg-info-400"></div>
+        <div className="absolute bottom-32 right-32 w-28 h-28 rounded-full opacity-25 blur-xl animate-pulse bg-info-300"></div> */}
 
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
           {/* Left side - Enhanced Image Section */}
@@ -54,8 +56,8 @@ const AboutSection = () => {
 
                 {/* Decorative cleaning sponge element */}
                 <div className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 z-20">
-                  <div className="w-16 h-16 lg:w-24 lg:h-24 bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-2xl transform rotate-12 flex items-center justify-center shadow-2xl">
-                    <div className="w-10 h-10 lg:w-14 lg:h-14 bg-yellow-500 rounded-xl transform -rotate-6"></div>
+                  <div className="w-16 h-16 lg:w-24 lg:h-24 bg-gradient-accent-warm rounded-2xl transform rotate-12 flex items-center justify-center shadow-2xl">
+                    <div className="w-10 h-10 lg:w-14 lg:h-14 bg-[var(--support-yellow-500)] rounded-xl transform -rotate-6"></div>
                   </div>
                 </div>
 
@@ -103,13 +105,25 @@ const AboutSection = () => {
 
           {/* Right side - Content with enhanced accessibility */}
           <article className="flex-1 w-full max-w-2xl">
-            <div className="bg-white rounded-3xl p-6 md:p-10 shadow-2xl">
+            <div className="bg-[var(--neutral-white)] rounded-3xl p-6 md:p-10 shadow-2xl">
               <header className="mb-6">
                 <h2
                   id="about-heading"
-                  className="text-2xl oxygen md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight"
+                  className="text-2xl oxygen md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 leading-tight"
                 >
-                  Few Words About Anshitha Cleaning Services
+                  <SplitText
+            text={"Few Words About Anshitha Cleaning Service"}
+            
+            delay={150}
+            duration={0.5}
+            ease="power3.out"
+            splitType="words"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="start"
+          />
                 </h2>
 
                 {/* <p className="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -127,46 +141,46 @@ const AboutSection = () => {
               >
                 <li className="flex items-start gap-3">
                   <Check
-                    className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0"
+                    className="w-6 h-6 text-info-600 mt-0.5 flex-shrink-0"
                     aria-hidden="true"
                   />
-                  <span className="text-base md:text-lg text-gray-800 font-medium">
+                  <span className="text-base md:text-lg text-neutral-800 font-medium">
                     Coverage of 90% of UK cities and towns
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check
-                    className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0"
+                    className="w-6 h-6 text-info-600 mt-0.5 flex-shrink-0"
                     aria-hidden="true"
                   />
-                  <span className="text-base md:text-lg text-gray-800 font-medium">
+                  <span className="text-base md:text-lg text-neutral-800 font-medium">
                     6 types of cleaning services available
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check
-                    className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0"
+                    className="w-6 h-6 text-info-600 mt-0.5 flex-shrink-0"
                     aria-hidden="true"
                   />
-                  <span className="text-base md:text-lg text-gray-800 font-medium">
+                  <span className="text-base md:text-lg text-neutral-800 font-medium">
                     Over 120 professional cleaners
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check
-                    className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0"
+                    className="w-6 h-6 text-info-600 mt-0.5 flex-shrink-0"
                     aria-hidden="true"
                   />
-                  <span className="text-base md:text-lg text-gray-800 font-medium">
+                  <span className="text-base md:text-lg text-neutral-800 font-medium">
                     7 days a week service
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check
-                    className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0"
+                    className="w-6 h-6 text-info-600 mt-0.5 flex-shrink-0"
                     aria-hidden="true"
                   />
-                  <span className="text-base md:text-lg text-gray-800 font-medium">
+                  <span className="text-base md:text-lg text-neutral-800 font-medium">
                     UK based office for support
                   </span>
                 </li>
@@ -174,10 +188,10 @@ const AboutSection = () => {
 
               <a
                 href="#services"
-                className="inline-block bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-black font-semibold text-base md:text-lg py-3 md:py-4 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2"
+                // className="inline-block bg-gradient-accent-warm hover:bg-gradient-accent-warm-hover text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-4 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2"
                 aria-label="View all our cleaning services"
               >
-                View Services
+               <Button children="View Services" lightColor="bg-gradient-accent-warm" borderColor="border-transparent" className='inline-block text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-4 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2' />
               </a>
             </div>
           </article>

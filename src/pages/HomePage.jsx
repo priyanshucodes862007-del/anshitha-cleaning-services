@@ -6,7 +6,7 @@ import LoadingSkeleton from "@/components/LoadingSkeleton";
 
 const HomePage = () => {
   const heroContent = {
-    title: "Best Cleaning Services in Hyderabad, India",
+    title: "Make Your Home Shine Again – Hassle-Free Cleaning in Hyderabad",
     description:
       "Experience the best and fastest cleaning services in all over Hyderabad. Book with a simple call and get your place clean with proper safety and accordingly. We offer best discounts and 100% customer satisfaction.",
   };

@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PrimartBtn from "./PrimartBtn";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import Button from "./Button";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -46,7 +47,7 @@ const Navbar = () => {
     <>
       <header className="fixed navbar-glass w-full top-0 z-50 backdrop-blur-md">
         <nav
-          className="w-11/12 mx-auto flex items-center justify-between py-0 text-white"
+          className="w-11/12 mx-auto flex items-center justify-between py-0 text-on-surface"
           aria-label="Main Navigation"
         >
           {/* Logo */}
@@ -82,7 +83,7 @@ const Navbar = () => {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:block ml-4">
-            <PrimartBtn text="View Our Pricing" className="rounded-xl" />
+            <Button icon={false} children="View Our Pricing" className="rounded-xl font-semibold px-4 py-4" />
           </div>
 
           {/* Mobile Controls */}
@@ -90,7 +91,7 @@ const Navbar = () => {
             <PrimartBtn text="Pricing" className="rounded-xl" />
             <button
               onClick={toggleMenu}
-              className="w-fit px-3 h-full py-3 my-auto bg-black/20 backdrop-blur-md rounded-lg hover:bg-black/30 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
+              className="w-fit px-3 h-full py-3 my-auto bg-overlay-20 backdrop-blur-md rounded-brand hover:bg-overlay-30 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
@@ -123,7 +124,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 max-h-screen h-full w-[85%] max-w-sm bg-slate-900/95 backdrop-blur-xl shadow-2xl z-[70] md:hidden"
+              className="fixed top-0 right-0 max-h-screen h-full w-[85%] max-w-sm bg-surface/95 backdrop-blur-xl shadow-2xl z-[70] md:hidden"
               role="dialog"
               aria-modal="true"
               aria-label="Mobile navigation menu"
@@ -145,7 +146,7 @@ const Navbar = () => {
                 </Link>
                 <button
                   onClick={closeMenu}
-                  className="p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
+                  className="p-2 rounded-brand hover:bg-overlay-10 transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
                   aria-label="Close menu"
                 >
                   <RiCloseLine size={28} className="text-white" />
@@ -166,7 +167,7 @@ const Navbar = () => {
                       <Link
                         href={href}
                         onClick={closeMenu}
-                        className="block px-4 py-3 text-lg font-medium text-white hover:text-[var(--color-highlight)] hover:bg-white/5 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
+                        className="block px-4 py-3 text-lg font-medium text-on-surface hover:text-[var(--color-highlight)] hover:bg-overlay-10 rounded-brand transition-all focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)]"
                       >
                         {label}
                       </Link>
@@ -183,7 +184,7 @@ const Navbar = () => {
                 >
                   <PrimartBtn
                     text="View Our Pricing"
-                    className="w-full rounded-xl"
+                    className="w-full rounded-brand"
                   />
                 </motion.div>
               </nav>

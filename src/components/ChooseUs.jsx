@@ -1,10 +1,11 @@
-"use client";
 import React from "react";
 import { FaBriefcase, FaPlay } from "react-icons/fa";
 import { GiBroom } from "react-icons/gi";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { TbCertificate, TbSettingsCheck } from "react-icons/tb";
 import { IoIosCash } from "react-icons/io";
+import BlurText from "./BlurText";
+import FadeContent from "./FadeContent";
 
 // Data-driven approach: easy to update and reusable
 const features = [
@@ -47,7 +48,10 @@ const ChooseUs = ({
   featuresList = features,
 }) => {
   return (
-    <section className="w-full py-0 md:py-16 bg-gray-50" aria-labelledby="choose-us-heading">
+    <section
+      className="w-full py-0 md:py-16 bg-neutral-50"
+      aria-labelledby="choose-us-heading"
+    >
       <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto">
         {/* Left Side */}
         <article className="flex flex-col gap-10">
@@ -55,22 +59,35 @@ const ChooseUs = ({
             id="choose-us-heading"
             className="text-4xl md:text-6xl lg:text-7xl uppercase font-bold oxygen leading-snug"
           >
-            {heading}
+             <BlurText
+              text={heading}
+              delay={200}
+              animateBy="words"
+              direction="bottom"
+              
+            />
           </h2>
 
-          <div className="w-full relative h-full bg-black rounded-2xl overflow-hidden shadow-lg">
-            <div className="bg-black/30 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center z-20 text-center">
+          <div className="w-full relative h-full bg-[var(--neutral-black)] rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-overlay-30 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center z-20 text-center">
               <button
                 aria-label="Play introduction video"
-                className="bg-black/60 rounded-full p-6 flex items-center justify-center border-2 border-white border-dashed cursor-pointer transition hover:scale-105"
+                className="bg-overlay-60 rounded-full p-6 flex items-center justify-center border-2 border-[var(--neutral-white)] border-dashed cursor-pointer transition hover:scale-105"
               >
-                <FaPlay className="text-5xl text-amber-500" />
+                <FaPlay className="text-5xl text-accent-warm" />
               </button>
-              <p className="text-white font-bold roboto mt-3 text-lg">
+              <p className="text-on-hero font-bold roboto mt-3 text-lg">
                 Click here to know more
               </p>
             </div>
 
+            <FadeContent
+          blur={true}
+          duration={600}
+          delay={800}
+          easing="ease-out"
+          initialOpacity={0}
+        >
             <video
               src={videoSrc}
               poster={poster}
@@ -80,6 +97,7 @@ const ChooseUs = ({
               className="object-cover w-full h-full"
               aria-label="Introductory video about our cleaning services"
             />
+            </FadeContent>
           </div>
         </article>
 
@@ -88,11 +106,17 @@ const ChooseUs = ({
           {featuresList.map(({ icon: Icon, title, description }, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-2xl shadow-md w-64 flex flex-col items-center text-center hover:shadow-xl transition"
+              className="navbar-glass  p-6 rounded-2xl shadow-md w-64 flex flex-col items-center text-center hover:shadow-xl transition"
             >
-              <Icon className="text-amber-600 bg-amber-200/50 p-4 rounded-full text-6xl mb-3" />
+              <Icon
+                className="text-accent-warm-600 p-4 rounded-full text-6xl mb-3"
+                style={{
+                  backgroundColor:
+                    "color-mix(in srgb, var(--accent-warm-200) 50%, transparent)",
+                }}
+              />
               <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="text-sm text-gray-600 mt-1">{description}</p>
+              <p className="text-sm text-neutral-600 mt-1">{description}</p>
             </div>
           ))}
         </article>

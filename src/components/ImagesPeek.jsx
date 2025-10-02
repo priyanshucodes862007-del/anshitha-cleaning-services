@@ -67,11 +67,7 @@ const ImagesPeek = () => {
                     >
                       {/* Connecting line to the right */}
 
-                      <motion.div
-                        className="relative cursor-pointer border-l-3 border-t-3 border-b-3 border-amber-500 rounded-bl-xl rounded-tl-xl"
-                        
-                        
-                      >
+                      <motion.div className="relative cursor-pointer border-l-3 border-t-3 border-b-3 border-accent-warm rounded-bl-xl rounded-tl-xl">
                         <div className="w-24 h-24 md:w-32 md:h-32 p-2 rounded-xl overflow-hidden shadow-xl bg-transparent">
                           <img
                             src={image.url}
@@ -87,7 +83,8 @@ const ImagesPeek = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             style={{
-                              boxShadow: "0 0 30px rgba(59, 130, 246, 0.8)",
+                              boxShadow:
+                                "0 0 30px color-mix(in srgb, var(--info-500) 80%, transparent)",
                             }}
                           />
                         )}
@@ -109,10 +106,7 @@ const ImagesPeek = () => {
                     >
                       {/* Connecting line to the left */}
 
-                      <motion.div
-                        className="relative cursor-pointer border-r-3 border-t-3 border-b-3 border-amber-500 rounded-br-xl rounded-tr-xl"
-                      
-                      >
+                      <motion.div className="relative cursor-pointer border-r-3 border-t-3 border-b-3 border-accent-warm rounded-br-xl rounded-tr-xl">
                         <div className="w-24 h-24 md:w-32 md:h-32 p-2  rounded-xl overflow-hidden shadow-xl bg-transparent">
                           <img
                             src={image.url}
@@ -128,7 +122,8 @@ const ImagesPeek = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             style={{
-                              boxShadow: "0 0 30px rgba(139, 92, 246, 0.8)",
+                              boxShadow:
+                                "0 0 30px color-mix(in srgb, var(--accent-warm-500) 80%, transparent)",
                             }}
                           />
                         )}

@@ -3,6 +3,7 @@ import React from "react";
 import PrimartBtn from "./PrimartBtn";
 import SecondaryBtn from "./SecondaryBtn";
 import PriceBadge from "./PriceBadge";
+import Button from "./Button";
 
 const CTAButtons = ({
   primaryText = "Book A Cleaning Now",
@@ -14,31 +15,25 @@ const CTAButtons = ({
   isMobile = false,
 }) => {
   const pricePosition = isMobile
-    ? "bottom-[95%] left-10"
-    : "bottom-[85%] -left-10";
+    ? "bottom-[95%] left-10 z-50"
+    : "bottom-[85%] -left-10 z-50";
 
   return (
     <nav
       className={`relative flex ${
         isMobile ? "flex-col" : "flex-row"
-      } gap-4 items-center justify-center w-full max-w-lg
+      } gap-4 items-center justify-center w-full max-w-xl
        ${className}`}
       aria-label="Main actions"
       role="navigation"
     >
       <PriceBadge price={price} text={priceText} className={pricePosition} />
+ 
 
-      <PrimartBtn
-        text={primaryText}
-        href="#booking"
-        className={isMobile ? "w-full text-center" : "text-center text-lg w-full"}
-      />
+       <Button icon={false} className='w-full text-lg font-semibold px-6 py-4 rounded-full' children={primaryText} />
+ 
 
-      <SecondaryBtn
-        href={`tel:${phoneNumber}`}
-        text={secondaryText}
-        className={isMobile ? "w-full text-center" : "text-center text-lg w-full"}
-      />
+       <Button variant="dark" icon={false} className='w-full text-lg font-semibold px-6 py-4 rounded-full' children={secondaryText} />
     </nav>
   );
 };

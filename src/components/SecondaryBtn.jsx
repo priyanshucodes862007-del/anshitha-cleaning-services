@@ -12,7 +12,7 @@ const SecondaryBtn = ({
   type = "button",
 }) => {
   const baseClasses =
-    "oxygen border-2 hover:border-transparent border-[var(--color-background)] transition-all duration-300 hover:-translate-y-1 bg-transparent text-[var(--color-background)] hover:bg-[var(--color-background)] hover:text-[var(--color-text-primary)] font-bold px-6 py-3 cursor-pointer rounded-full focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0";
+    "oxygen border-2 hover:border-transparent border-[var(--color-background)] transition-all duration-300 hover:-translate-y-1 bg-transparent text-[var(--color-background)] hover:bg-[var(--color-background)] hover:text-[var(--color-text-primary)] font-bold px-6 py-3 cursor-pointer rounded-full focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0";
 
   const handleClick = (e) => {
     if (disabled) {

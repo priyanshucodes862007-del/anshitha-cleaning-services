@@ -9,7 +9,7 @@ const PriceBadge = ({
 }) => {
   return (
     <div
-      className={`${position} -rotate-6 bg-amber-500 px-4 py-2 rounded-bl-2xl rounded-tr-2xl ${className}`}
+      className={`${position} -rotate-6 bg-accent-warm px-4 py-2 rounded-bl-2xl rounded-tr-2xl ${className}`}
       role="complementary"
       aria-label={`${text} ${price}`}
     >
