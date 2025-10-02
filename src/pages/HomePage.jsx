@@ -18,21 +18,13 @@ const HomePage = () => {
       aria-label="Anshitha Cleaning Services Homepage"
     >
       {/* Mobile Hero Section - Priority for LCP */}
-      <LazyWrapper
-        fallback={<LoadingSkeleton isMobile={true} />}
-        threshold={0.1}
-        priority={true}
-      >
+       
         <HeroSection {...heroContent} isMobile={true} />
-      </LazyWrapper>
+      
 
-      {/* Desktop Hero Section */}
-      <LazyWrapper
-        fallback={<LoadingSkeleton isMobile={false} />}
-        threshold={0.1}
-      >
+      
         <HeroSection {...heroContent} isMobile={false} />
-      </LazyWrapper>
+      
 
       {/* Spacer section to prevent content overlap - Desktop only */}
       <div className="hidden md:block pt-48 lg:pt-64" aria-hidden="true"></div>

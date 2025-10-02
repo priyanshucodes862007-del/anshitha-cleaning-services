@@ -3,6 +3,7 @@ import StructuredData from "@/components/StructuredData";
 import PerformanceMonitor from "@/components/PerformanceMonitor";
 import "./globals.css";
 import { Oxygen, Roboto, Montserrat } from "next/font/google";
+import LenisProvider from "@/components/LenisProvider";
 
 // 1️⃣ Configure the fonts with performance optimizations
 export const oxygen = Oxygen({
@@ -121,8 +122,10 @@ export default function RootLayout({ children }) {
         className={`${oxygen.variable} ${roboto.variable} ${montserrat.variable} antialiased`}
       >
         <PerformanceMonitor />
+        <LenisProvider>
         <Navbar />
         {children}
+        </LenisProvider>
       </body>
     </html>
   );

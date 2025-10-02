@@ -39,13 +39,9 @@ const HeroSection = ({
           <CTAButtons isMobile={true} className="mt-12" />
 
           <div className="lg:hidden block mt-4">
-            <Suspense
-              fallback={
-                <div className="animate-pulse bg-gray-700 rounded-lg h-16 w-48"></div>
-              }
-            >
+           
               <ReviewsBadge />
-            </Suspense>
+           
           </div>
 
           <div className="w-full max-w-2xl mt-16">
@@ -75,23 +71,11 @@ const HeroSection = ({
         </h1>
 
         <div className="hidden lg:block absolute right-10 top-1/2">
-          <Suspense
-            fallback={
-              <div className="animate-pulse bg-gray-700 rounded-lg h-16 w-48"></div>
-            }
-          >
+          
             <ReviewsBadge />
-          </Suspense>
+         
         </div>
-        <div className="hidden lg:block absolute left-10 -translate-y-1/2 top-1/2">
-          <Suspense
-            fallback={
-              <div className="animate-pulse bg-gray-700 rounded-lg h-16 w-48"></div>
-            }
-          >
-            <ImagesPeek />
-          </Suspense>
-        </div>
+       
 
         <p className="text-center font-semibold text-base md:text-lg leading-relaxed mb-10 md:mb-12 max-w-2xl text-gray-200">
           {description}
