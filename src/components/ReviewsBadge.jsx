@@ -89,10 +89,10 @@ const ReviewsBadge = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-60 pointer-events-none"
+              className="absolute bottom-full translate-x-1/2 right-[70%] mb-3 w-80 pointer-events-none"
             >
               {/* Arrow */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white/95 rotate-45 border-r border-b border-orange-200" />
+              <div className="absolute -bottom-2 left-[60%] -translate-x-1/2 w-4 h-4 bg-white/95 rotate-45 border-r border-b border-orange-200" />
 
               {/* Tooltip Content */}
               <div className="relative bg-white/95 backdrop-blur-md rounded-xl p-5 shadow-xl border border-orange-200">
@@ -121,7 +121,7 @@ const ReviewsBadge = () => {
                     </div>
 
                     {/* Review Text */}
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-base font-semibold leading-relaxed">
                       "{reviews[currentReviewIndex].text}"
                     </p>
                   </motion.div>

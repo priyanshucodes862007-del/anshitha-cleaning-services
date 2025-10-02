@@ -10,32 +10,32 @@ const ImagesPeek = () => {
   const images = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop",
+      url: "https://images.pexels.com/photos/209271/pexels-photo-209271.jpeg",
       alt: "Mountain landscape",
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=400&fit=crop",
+      url: "https://images.pexels.com/photos/9462307/pexels-photo-9462307.jpeg",
       alt: "Forest trail",
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&fit=crop",
+      url: "https://images.pexels.com/photos/6195110/pexels-photo-6195110.jpeg",
       alt: "Nature path",
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=400&fit=crop",
+      url: "https://images.pexels.com/photos/6195285/pexels-photo-6195285.jpeg",
       alt: "Sunset lake",
     },
     {
       id: 5,
-      url: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&h=400&fit=crop",
+      url: "https://images.pexels.com/photos/6196238/pexels-photo-6196238.jpeg",
       alt: "Mountain peak",
     },
     {
       id: 6,
-      url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400&h=400&fit=crop",
+      url: "https://images.pexels.com/photos/9462298/pexels-photo-9462298.jpeg",
       alt: "Desert landscape",
     },
   ];
@@ -72,7 +72,7 @@ const ImagesPeek = () => {
                         
                         
                       >
-                        <div className="w-24 h-24 md:w-24 md:h-24 p-2 rounded-xl overflow-hidden shadow-xl bg-transparent">
+                        <div className="w-24 h-24 md:w-32 md:h-32 p-2 rounded-xl overflow-hidden shadow-xl bg-transparent">
                           <img
                             src={image.url}
                             alt={image.alt}
@@ -113,7 +113,7 @@ const ImagesPeek = () => {
                         className="relative cursor-pointer border-r-3 border-t-3 border-b-3 border-amber-500 rounded-br-xl rounded-tr-xl"
                       
                       >
-                        <div className="w-24 h-24 md:w-24 md:h-24 p-2  rounded-xl overflow-hidden shadow-xl bg-transparent">
+                        <div className="w-24 h-24 md:w-32 md:h-32 p-2  rounded-xl overflow-hidden shadow-xl bg-transparent">
                           <img
                             src={image.url}
                             alt={image.alt}

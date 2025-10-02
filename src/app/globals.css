@@ -19,7 +19,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   font-family: var(--font-montserrat), sans-serif;
-
+  background-color: var(--color-background);
   color: var(--color-text-primary);
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
