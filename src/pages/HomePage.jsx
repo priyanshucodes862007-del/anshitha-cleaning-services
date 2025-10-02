@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import HeroSection from "@/components/HeroSection";
 import LazyWrapper from "@/components/LazyWrapper";
@@ -11,7 +12,11 @@ const HomePage = () => {
   };
 
   return (
-    <main role="main" className="" aria-label="Anshitha Cleaning Services Homepage">
+    <main
+      role="main"
+      className=""
+      aria-label="Anshitha Cleaning Services Homepage"
+    >
       {/* Mobile Hero Section - Priority for LCP */}
       <LazyWrapper
         fallback={<LoadingSkeleton isMobile={true} />}
