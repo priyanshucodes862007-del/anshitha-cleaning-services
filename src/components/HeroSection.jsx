@@ -6,6 +6,9 @@ import SplitText from "./SplitText";
 import FadeContent from "./FadeContent";
 import AnimatedContent from "./AnimatedContent";
 import LoadingSkeleton from "./LoadingSkeleton";
+import ContentLoop from "./ContentLoop";
+import { FaGoogle } from "react-icons/fa";
+import Marquee from "./Marquee";
 
 // Lazy load ReviewsBadge to reduce initial bundle size
 const ReviewsBadge = lazy(() => import("./ReviewsBadge"));
@@ -115,7 +118,122 @@ const HeroSection = ({
               threshold={0.2}
               delay={0.15}
             >
-              <div className="w-full max-w-2xl mt-16">
+              <div className="max-w-screen mt-8 overflow-hidden">
+                <Marquee className="[--duration:20s]" pauseOnHover>
+                  <div className="  flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">4.5</p>
+                      <p>
+                        Ratings on <br /> Google
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">1k+</p>
+                      <p>
+                        Happy
+                        <br />
+                        Clients
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">24/7</p>
+                      <p>
+                        Customer
+                        <br />
+                        support
+                      </p>
+                    </div>
+                  </div>
+                  <div className="  flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">4.5</p>
+                      <p>
+                        Ratings on <br /> Google
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">1k+</p>
+                      <p>
+                        Happy
+                        <br />
+                        Clients
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">24/7</p>
+                      <p>
+                        Customer
+                        <br />
+                        support
+                      </p>
+                    </div>
+                  </div>
+                  <div className="  flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">4.5</p>
+                      <p>
+                        Ratings on <br /> Google
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">1k+</p>
+                      <p>
+                        Happy
+                        <br />
+                        Clients
+                      </p>
+                    </div>
+                  </div>
+                  <div className=" flex items-center justify-between px-6 py-3 gap-4">
+                    {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+                    <div className="flex items-center gap-4">
+                      <p className="font-semibold oxygen text-5xl">24/7</p>
+                      <p>
+                        Customer
+                        <br />
+                        support
+                      </p>
+                    </div>
+                  </div>
+                </Marquee>
+              </div>
+              <div className="w-full max-w-2xl mt-12">
                 <VideoPlayer
                   aspectRatio="aspect-video"
                   className="shadow-2xl"
@@ -167,7 +285,7 @@ const HeroSection = ({
 
           <SplitText
             text={description}
-            className="text-center font-semibold text-base md:text-lg leading-relaxed mb-10 md:mb-12 max-w-2xl text-on-hero/80"
+            className="text-center font-medium text-base md:text-xl leading-relaxed mb-10 md:mb-12 max-w-2xl text-on-hero/80"
             delay={60}
             duration={0.7}
             ease="power3.out"
@@ -189,6 +307,121 @@ const HeroSection = ({
           >
             <CTAButtons isMobile={false} className="gap-6 mt-6" />
           </FadeContent>
+        </div>
+        <div className="absolute bottom-24">
+          <Marquee className="[--duration:20s]" pauseOnHover>
+            <div className="  flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">4.5</p>
+                <p>
+                  Ratings on <br /> Google
+                </p>
+              </div>
+            </div>
+            <div className=" flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">1k+</p>
+                <p>
+                  Happy
+                  <br />
+                  Clients
+                </p>
+              </div>
+            </div>
+            <div className=" flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">24/7</p>
+                <p>
+                  Customer
+                  <br />
+                  support
+                </p>
+              </div>
+            </div>
+            <div className="  flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">4.5</p>
+                <p>
+                  Ratings on <br /> Google
+                </p>
+              </div>
+            </div>
+            <div className=" flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">1k+</p>
+                <p>
+                  Happy
+                  <br />
+                  Clients
+                </p>
+              </div>
+            </div>
+            <div className=" flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">24/7</p>
+                <p>
+                  Customer
+                  <br />
+                  support
+                </p>
+              </div>
+            </div>
+            <div className="  flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">4.5</p>
+                <p>
+                  Ratings on <br /> Google
+                </p>
+              </div>
+            </div>
+            <div className=" flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">1k+</p>
+                <p>
+                  Happy
+                  <br />
+                  Clients
+                </p>
+              </div>
+            </div>
+            <div className=" flex items-center justify-between px-6 py-3 gap-4">
+              {/* <div>
+                <FaGoogle size={42} />
+              </div> */}
+              <div className="flex items-center gap-4">
+                <p className="font-semibold oxygen text-5xl">24/7</p>
+                <p>
+                  Customer
+                  <br />
+                  support
+                </p>
+              </div>
+            </div>
+          </Marquee>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 w-full px-6 lg:px-8 z-20 transform translate-y-1/2">

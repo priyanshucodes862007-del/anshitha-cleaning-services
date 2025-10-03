@@ -34,6 +34,7 @@ export const montserrat = Montserrat({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://anshithacleaning.com"),
   title:
     "Anshitha Cleaning Services - Best Cleaning Services in Hyderabad, India",
   description:
@@ -98,7 +99,6 @@ export default function RootLayout({ children }) {
           as="video"
           type="video/mp4"
         />
-        <link rel="preload" href="/images/hero-illustration.png" as="image" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         {/* Critical CSS inlined for faster FCP */}
@@ -123,8 +123,8 @@ export default function RootLayout({ children }) {
       >
         <PerformanceMonitor />
         <LenisProvider>
-        <Navbar />
-        {children}
+          <Navbar />
+          {children}
         </LenisProvider>
       </body>
     </html>

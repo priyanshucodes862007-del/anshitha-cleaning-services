@@ -191,7 +191,7 @@ const AboutSection = () => {
                 // className="inline-block bg-gradient-accent-warm hover:bg-gradient-accent-warm-hover text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-4 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2"
                 aria-label="View all our cleaning services"
               >
-               <Button children="View Services" lightColor="bg-gradient-accent-warm" borderColor="border-transparent" className='inline-block text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-4 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2' />
+               <Button children="View Services" lightColor="bg-gradient-accent-warm" darkColor="bg-secondary"  borderColor="border-transparent" className='inline-block text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-5 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2' />
               </a>
             </div>
           </article>

@@ -18,13 +18,10 @@ const HomePage = () => {
       aria-label="Anshitha Cleaning Services Homepage"
     >
       {/* Mobile Hero Section - Priority for LCP */}
-       
-        <HeroSection {...heroContent} isMobile={true} />
-      
 
-      
-        <HeroSection {...heroContent} isMobile={false} />
-      
+      <HeroSection {...heroContent} isMobile={true} />
+
+      <HeroSection {...heroContent} isMobile={false} />
 
       {/* Spacer section to prevent content overlap - Desktop only */}
       <div className="hidden md:block pt-48 lg:pt-64" aria-hidden="true"></div>

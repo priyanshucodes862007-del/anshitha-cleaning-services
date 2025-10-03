@@ -106,10 +106,10 @@ const ChooseUs = ({
           {featuresList.map(({ icon: Icon, title, description }, idx) => (
             <div
               key={idx}
-              className="navbar-glass  p-6 rounded-2xl shadow-md w-64 flex flex-col items-center text-center hover:shadow-xl transition"
+              className=" border border-slate-600  p-6 rounded-2xl shadow-md w-64 flex flex-col items-center text-center hover:shadow-xl transition"
             >
               <Icon
-                className="text-accent-warm-600 p-4 rounded-full text-6xl mb-3"
+                className="text-[var(--color-hero-start)] p-4 rounded-full text-7xl mb-3"
                 style={{
                   backgroundColor:
                     "color-mix(in srgb, var(--accent-warm-200) 50%, transparent)",

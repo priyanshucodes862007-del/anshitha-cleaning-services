@@ -32,13 +32,6 @@ const VideoPlayer = ({
         poster="/images/video-poster.svg"
       >
         <source src={src} type="video/mp4" />
-        <track
-          kind="captions"
-          src="/videos/captions.vtt"
-          srcLang="en"
-          label="English captions"
-          default
-        />
         <p>
           Your browser does not support the video tag.
           <a href={src} download>
