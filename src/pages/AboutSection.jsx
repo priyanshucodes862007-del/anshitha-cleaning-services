@@ -4,17 +4,13 @@ import React from "react";
 import { Check } from "lucide-react";
 import SplitText from "@/components/SplitText";
 import Button from "@/components/Button";
+import BlurText from "@/components/BlurText";
 
 const AboutSection = () => {
   return (
-    <section className="mt-20 md:mt-40 pb-20" aria-labelledby="about-heading">
-      <div className="w-11/12 max-w-full mx-auto rounded-3xl hero py-16 px-6 md:px-12 lg:px-16 relative overflow-hidden">
-        {/* Enhanced decorative circles with animation */}
-        {/* <div className="absolute top-10 left-10 w-32 h-32 rounded-full opacity-20 blur-2xl animate-pulse bg-info-400"></div>
-        <div className="absolute top-40 left-40 w-24 h-24 rounded-full opacity-25 blur-xl bg-info-300"></div>
-        <div className="absolute bottom-20 left-20 w-20 h-20 rounded-full opacity-15 blur-lg bg-info-500"></div>
-        <div className="absolute top-20 right-48 w-40 h-40 rounded-full opacity-20 blur-2xl bg-info-400"></div>
-        <div className="absolute bottom-32 right-32 w-28 h-28 rounded-full opacity-25 blur-xl animate-pulse bg-info-300"></div> */}
+    <section className="mt-20 md:mt-40" aria-labelledby="about-heading">
+      <div className="w-11/12 max-w-full mx-auto rounded-3xl hero py-8 px-6 md:px-12 lg:px-8 relative overflow-hidden">
+       
 
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
           {/* Left side - Enhanced Image Section */}
@@ -61,12 +57,7 @@ const AboutSection = () => {
                   </div>
                 </div>
 
-                {/* Decorative spray bottle element */}
-                {/* <div className="absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-20">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-cyan-300 to-cyan-400 rounded-full flex items-center justify-center shadow-xl">
-                    <div className="w-6 h-6 lg:w-8 lg:h-8 bg-white rounded-full"></div>
-                  </div>
-                </div> */}
+                
               </div>
 
               {/* CSS animation for morphing effect */}
@@ -105,13 +96,13 @@ const AboutSection = () => {
 
           {/* Right side - Content with enhanced accessibility */}
           <article className="flex-1 w-full max-w-2xl">
-            <div className="bg-[var(--neutral-white)] rounded-3xl p-6 md:p-10 shadow-2xl">
+            <div className="bg-[var(--neutral-white)] rounded-3xl p-6 md:p-6 shadow-2xl">
               <header className="mb-6">
                 <h2
                   id="about-heading"
-                  className="text-2xl oxygen md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-4 leading-tight"
+                  className="text-2xl oxygen md:text-2xl lg:text-3xl font-medium text-neutral-900 mb-4 leading-tight"
                 >
-                  <SplitText
+                  <BlurText
             text={"Few Words About Anshitha Cleaning Service"}
             
             delay={150}
@@ -135,7 +126,7 @@ const AboutSection = () => {
               </header>
 
               <ul
-                className="space-y-4 font-medium roboto mb-8"
+                className="space-y-4  roboto mb-0"
                 role="list"
                 aria-label="Service features"
               >
@@ -191,7 +182,7 @@ const AboutSection = () => {
                 // className="inline-block bg-gradient-accent-warm hover:bg-gradient-accent-warm-hover text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-4 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2"
                 aria-label="View all our cleaning services"
               >
-               <Button children="View Services" lightColor="bg-gradient-accent-warm" darkColor="bg-secondary"  borderColor="border-transparent" className='inline-block text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-5 px-8 md:px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2' />
+               <Button children="View Services" lightColor="bg-gradient-accent-warm" darkColor="bg-secondary"  borderColor="border-transparent" className='inline-block text-[var(--neutral-black)] font-semibold text-base md:text-lg py-3 md:py-3 px-8 md:px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[var(--support-cyan-300)] focus:ring-offset-2 mt-6' />
               </a>
             </div>
           </article>

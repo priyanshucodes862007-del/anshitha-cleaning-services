@@ -15,14 +15,14 @@ export const oxygen = Oxygen({
   fallback: ["system-ui", "arial"],
 });
 
-export const roboto = Roboto({
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  weight: ["400", "700"],
-  display: "swap",
-  preload: false, // Only preload primary font
-  fallback: ["system-ui", "arial"],
-});
+// export const roboto = Roboto({
+//   subsets: ["latin"],
+//   variable: "--font-roboto",
+//   weight: ["400", "700"],
+//   display: "swap",
+//   preload: false, // Only preload primary font
+//   fallback: ["system-ui", "arial"],
+// });
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
@@ -93,12 +93,7 @@ export default function RootLayout({ children }) {
       <head>
         <StructuredData />
         {/* Critical resource preloading */}
-        <link
-          rel="preload"
-          href="/videos/hero-video.mp4"
-          as="video"
-          type="video/mp4"
-        />
+         
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         {/* Critical CSS inlined for faster FCP */}
@@ -119,7 +114,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${oxygen.variable} ${roboto.variable} ${montserrat.variable} antialiased`}
+        className={`${oxygen.variable}  ${montserrat.variable} antialiased`}
       >
         <PerformanceMonitor />
         <LenisProvider>

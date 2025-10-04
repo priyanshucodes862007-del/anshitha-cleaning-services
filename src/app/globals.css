@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: var(--font-montserrat), var(--font-oxygen), var(--font-roboto),
+  font-family: var(--font-montserrat), var(--font-oxygen)
     sans-serif;
   /* Semantic color tokens */
   --color-primary: #2aae9e;

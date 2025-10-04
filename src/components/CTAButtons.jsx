@@ -30,10 +30,10 @@ const CTAButtons = ({
       <PriceBadge price={price} text={priceText} className={pricePosition} />
  
 
-       <Button icon={false} className='w-full text-lg font-semibold px-6 py-4 rounded-full' children={primaryText} />
+       <Button icon={false} className='w-full font-semibold px-6 py-4 rounded-full' children={primaryText} />
  
 
-       <Button variant="dark" icon={false} className='w-full text-lg font-semibold px-6 py-4 rounded-full' children={secondaryText} />
+       <Button variant="dark" icon={false} className='w-full  font-medium px-6 py-4 rounded-full' children={secondaryText} />
     </nav>
   );
 };

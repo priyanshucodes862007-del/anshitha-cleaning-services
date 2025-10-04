@@ -124,7 +124,7 @@ const ServiceStack = () => {
     const animation = gsap.timeline({
       scrollTrigger: {
         trigger: triggerRef.current,
-        start: "top 0%",
+        start: "top top",
         end: () => `+=${window.innerHeight * totalCards}`,
         scrub: 1,
         pin: sectionRef.current,

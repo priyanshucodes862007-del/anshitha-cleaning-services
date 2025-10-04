@@ -13,8 +13,8 @@ const PriceBadge = ({
       role="complementary"
       aria-label={`${text} ${price}`}
     >
-      <p className="font-bold text-black text-sm sm:text-base">
-        {text} <span className="font-extrabold">{price}</span>
+      <p className="font-medium text-black text-sm sm:text-base">
+        {text} <span className="font-semibold">{price}</span>
       </p>
     </div>
   );

@@ -60,26 +60,15 @@ const HeroSection = ({
             >
               <BlurText
                 text={title}
-                delay={70}
+                delay={50}
                 animateBy="words"
                 direction="top"
                 className="flex items-center justify-center text-center "
               />
             </h1>
 
-            <SplitText
-              text={description}
-              className="text-sm sm:text-base leading-relaxed max-w-xl text-on-hero/80"
-              delay={60}
-              duration={0.7}
-              ease="power3.out"
-              splitType="words"
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-100px"
-              textAlign="center"
-            />
+              
+            <p className="text-sm sm:text-base leading-relaxed max-w-xl text-on-hero/80" >{description}</p>
 
             <FadeContent
               blur={true}
@@ -87,9 +76,9 @@ const HeroSection = ({
               delay={500}
               easing="ease-out"
               initialOpacity={0}
-              className="lg:hidden w-full mt-4"
+              className="lg:hidden w-10/12 mx-auto mt-4"
             >
-              <CTAButtons isMobile={true} className="mt-12" />
+              <CTAButtons isMobile={true} className="mt-0" />
             </FadeContent>
 
             <FadeContent
@@ -106,18 +95,7 @@ const HeroSection = ({
               </div>
             </FadeContent>
 
-            <AnimatedContent
-              distance={150}
-              direction="vertical"
-              reverse={false}
-              duration={0.7}
-              ease="power3.out"
-              initialOpacity={0}
-              animateOpacity
-              scale={1}
-              threshold={0.2}
-              delay={0.15}
-            >
+             
               <div className="max-w-screen mt-8 overflow-hidden">
                 <Marquee className="[--duration:20s]" pauseOnHover>
                   <div className="  flex items-center justify-between px-6 py-3 gap-4">
@@ -240,7 +218,7 @@ const HeroSection = ({
                   priority={true}
                 />
               </div>
-            </AnimatedContent>
+            
           </div>
         </section>
       </>
@@ -260,7 +238,7 @@ const HeroSection = ({
         <div className="container mx-auto px-6 lg:px-8 z-10 flex flex-col items-center justify-center pt-36 lg:pt-44 pb-16 md:pb-20">
           <h1
             id="hero-title-desktop"
-            className="text-center text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6 max-w-5xl oxygen"
+            className="text-center w-8/12 text-4xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6 max-w-5xl oxygen"
           >
             <BlurText
               text={title}
@@ -285,7 +263,7 @@ const HeroSection = ({
 
           <SplitText
             text={description}
-            className="text-center font-medium text-base md:text-xl leading-relaxed mb-10 md:mb-12 max-w-2xl text-on-hero/80"
+            className="text-center text-base md:text-lg leading-tight mb-10 md:mb-12 max-w-2xl text-on-hero/80"
             delay={60}
             duration={0.7}
             ease="power3.out"
@@ -305,7 +283,7 @@ const HeroSection = ({
             initialOpacity={0}
             className="w-full mx-auto flex justify-center items-center"
           >
-            <CTAButtons isMobile={false} className="gap-6 mt-6" />
+            <CTAButtons isMobile={false} className="gap-6 mt-0" />
           </FadeContent>
         </div>
         <div className="absolute bottom-24">

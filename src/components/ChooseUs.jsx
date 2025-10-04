@@ -49,26 +49,26 @@ const ChooseUs = ({
 }) => {
   return (
     <section
-      className="w-full py-0 md:py-16 bg-neutral-50"
+      className="w-full mt-6 py-0 md:py-16 bg-neutral-50"
       aria-labelledby="choose-us-heading"
     >
-      <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto">
+      <div className="w-11/12 grid grid-cols-1 md:grid-cols-12 gap-10 mx-auto">
         {/* Left Side */}
-        <article className="flex flex-col gap-10">
+        <article className="flex flex-col md:col-span-5 gap-10">
           <h2
             id="choose-us-heading"
-            className="text-4xl md:text-6xl lg:text-7xl uppercase font-bold oxygen leading-snug"
+            className="text-4xl md:text-4xl lg:text-6xl uppercase font-semibold oxygen leading-tight"
           >
              <BlurText
               text={heading}
-              delay={200}
+              delay={300}
               animateBy="words"
               direction="bottom"
               
             />
           </h2>
 
-          <div className="w-full relative h-full bg-[var(--neutral-black)] rounded-2xl overflow-hidden shadow-lg">
+          <div className="w-full relative  aspect-video bg-[var(--neutral-black)] rounded-xl overflow-hidden shadow-lg">
             <div className="bg-overlay-30 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center z-20 text-center">
               <button
                 aria-label="Play introduction video"
@@ -76,9 +76,9 @@ const ChooseUs = ({
               >
                 <FaPlay className="text-5xl text-accent-warm" />
               </button>
-              <p className="text-on-hero font-bold roboto mt-3 text-lg">
+              {/* <p className="text-on-hero font-bold roboto mt-3 text-lg">
                 Click here to know more
-              </p>
+              </p> */}
             </div>
 
             <FadeContent
@@ -102,14 +102,14 @@ const ChooseUs = ({
         </article>
 
         {/* Right Side */}
-        <article className="flex h-fit mt-auto flex-wrap items-center justify-center gap-8">
+        <article className=" h-fit mt-auto p-0 w-full md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-4">
           {featuresList.map(({ icon: Icon, title, description }, idx) => (
             <div
               key={idx}
-              className=" border border-slate-600  p-6 rounded-2xl shadow-md w-64 flex flex-col items-center text-center hover:shadow-xl transition"
+              className=" border border-slate-600 w-full col-span-1 p-3 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition"
             >
               <Icon
-                className="text-[var(--color-hero-start)] p-4 rounded-full text-7xl mb-3"
+                className="text-[var(--color-hero-start)] p-2 rounded-full text-5xl mb-3"
                 style={{
                   backgroundColor:
                     "color-mix(in srgb, var(--accent-warm-200) 50%, transparent)",
