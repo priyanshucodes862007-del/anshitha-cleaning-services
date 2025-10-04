@@ -1,4 +1,5 @@
 import ChooseUs from "@/components/ChooseUs";
+import PricingSection from "@/components/PricingSection";
 import ServiceSection from "@/components/ServiceSection";
 import AboutSection from "@/pages/AboutSection";
 import HomePage from "@/pages/HomePage";
@@ -11,7 +12,7 @@ const page = () => {
       <AboutSection />
       <ChooseUs />
       <ServiceSection />
-      <div className="bg-black min-h-screen">hy</div>
+      <PricingSection />
     </>
   );
 };
